@@ -31,7 +31,7 @@ const ProductScreen = ({ history, match }) => {
     return () => {
       dispatch(clearProductDetails());
     };
-  }, [match]);
+  }, [dispatch, match]);
 
   const addToCartHandler = () => {
     dispatch(addToCart(product._id, qty));

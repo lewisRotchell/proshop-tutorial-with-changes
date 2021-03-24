@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -25,7 +25,7 @@ const CartScreen = ({ match, location, history }) => {
     dispatch(removeFromCart(id));
   };
 
-  const checkoutHnadler = () => {
+  const checkoutHandler = () => {
     history.push("/login?redirect=shipping");
   };
 
@@ -100,7 +100,7 @@ const CartScreen = ({ match, location, history }) => {
                 type="button"
                 className="btn-block"
                 disabled={cartItems.length === 0}
-                onClick={checkoutHnadler}
+                onClick={checkoutHandler}
               >
                 Proceed To Checkout
               </Button>
